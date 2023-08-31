@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml" xmlns:th="https://www.thymeleaf.org">
+<head>
+    <meta charset="utf-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Like a Puppy OAuth2 Identity Provider</title>
+    <link rel="stylesheet" href="/webjars/bootstrap/css/bootstrap.css" th:href="@{/webjars/bootstrap/css/bootstrap.css}"/>
+    <link rel="stylesheet" href="/assets/css/login.css" th:href="@{/assets/css/login.css}"/>
+</head>
+<body>
+<div class="container">
+    <form class="form-login w-100 m-auto" method="post" th:action="@{/login}">
+        <div th:if="${param.error}" class="alert alert-danger" role="alert">
+            Invalid username or password.
+        </div>
+        <div th:if="${param.logout}" class="alert alert-success" role="alert">
+            You have been logged out.
+        </div>
+        <h3 class="h3 mb-3 fw-normal">개같이 로그인</h3>
+        <div class="form-floating">
+            <input type="text" id="username" name="username" class="form-control" required autofocus>
+            <label for="username">개같은 아이디</label>
+        </div>
+        <div class="form-floating">
+            <input type="password" id="password" name="password" class="form-control" required>
+            <label for="password">개같은 비밀번호</label>
+        </div>
+        <div>
+            <button class="w-100 btn btn-sm btn-primary btn-block" type="submit">개같이 로그인</button>
+            <button class="w-100 btn btn-sm btn-light btn-block bg-white" type="button" style="margin-top: 10px">개같이 회원가입</button>
+        </div>
+    </form>
+</div>
+</body>
+</html>
