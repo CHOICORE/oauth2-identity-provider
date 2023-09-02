@@ -1,4 +1,4 @@
-package me.choicore.likeapuppy.oauth2identityprovider.web
+package me.choicore.likeapuppy.oauth2identityprovider.web.view
 
 import org.springframework.stereotype.Controller
 import org.springframework.web.bind.annotation.GetMapping
@@ -8,7 +8,7 @@ import org.springframework.web.bind.annotation.GetMapping
 class LoginController {
 
     @GetMapping("/login")
-    fun signIn(): String {
+    fun login(): String {
         return "login"
     }
 

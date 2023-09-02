@@ -13,21 +13,18 @@
         <div th:if="${param.error}" class="alert alert-danger" role="alert">
             Invalid username or password.
         </div>
-        <div th:if="${param.logout}" class="alert alert-success" role="alert">
-            You have been logged out.
-        </div>
         <h3 class="h3 mb-3 fw-normal">개같이 로그인</h3>
         <div class="form-floating">
             <input type="text" id="username" name="username" class="form-control" required autofocus>
-            <label for="username">개같은 아이디</label>
+            <label for="username">Username</label>
         </div>
         <div class="form-floating">
             <input type="password" id="password" name="password" class="form-control" required>
-            <label for="password">개같은 비밀번호</label>
+            <label for="password">Password</label>
         </div>
         <div>
-            <button class="w-100 btn btn-sm btn-primary btn-block" type="submit">개같이 로그인</button>
-            <button class="w-100 btn btn-sm btn-light btn-block bg-white" type="button" style="margin-top: 10px">개같이 회원가입</button>
+            <button class="w-100 btn btn-sm btn-primary btn-block" type="submit">로그인</button>
+            <button class="w-100 btn btn-sm btn-light btn-block bg-white" style="margin-top: 10px" type="button">회원가입</button>
         </div>
     </form>
 </div>
